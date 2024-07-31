@@ -1,0 +1,132 @@
+//Common or re-used styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.h1 {
+  &__desktop {
+    font-size: 50px;
+    font-weight: 600;
+    color: $darkBlue;
+    margin: 20px 0 20px;
+  }
+
+  &__mobile {
+    font-size: 35px;
+    font-weight: 600;
+    color: $darkBlue;
+    margin: 20px 0 10px;
+  }
+}
+
+.p {
+  &__desktop {
+    color: $grayishBlue;
+    line-height: 25px;
+    margin: 10px 0 30px;
+    max-width: 350px;
+  }
+
+  &__mobile {
+    color: $grayishBlue;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 10px 0 30px;
+    max-width: 300px;
+  }
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+}
+
+.common-page-grid-desktop {
+  margin: 0 130px 0 170px;
+  min-width: 1100px;
+  max-width: 1100px;
+}
+
+.common-page-grid-mobile {
+  margin: 0 25px 0 25px;
+  min-width: 330px;
+  max-width: 364px;
+}
+
+.logo {
+  &__desktop {
+    background-image: url('../assets/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 146px;
+    background-size: contain;
+  }
+
+  &__mobile {
+    background-image: url('../assets/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 115px;
+    background-size: contain;
+  }
+}
+
+.contact-button {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  background-color: $brightRed;
+  border: none;
+  border-radius: 25px;
+  width: 135px;
+  height: 43px;
+  box-shadow: 0 8px 20px -5px $brightRed;
+}
+
+.main {
+  &__desktop {
+    position: relative;
+    overflow: hidden;
+    min-height: 34rem;
+  }
+
+  &__mobile {
+    position: relative;
+    overflow: hidden;
+    min-height: 12rem;
+  }
+}
+
+.main__desktop::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('../assets/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(500px, -120px);
+  z-index: -1;
+}
+
+.main__mobile::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('../assets/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(90px, -260px);
+  z-index: -1;
+}

@@ -1,0 +1,53 @@
+.intro {
+  &__desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    position: relative;
+    align-items: center;
+    margin-top: 40px;
+
+    &__picture {
+      background-image: url(../assets/illustration-intro.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 500px;
+      height: 500px;
+      order: 2;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      order: 1;
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__picture {
+      background-image: url(../assets/illustration-intro.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 320px;
+      height: 320px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+}

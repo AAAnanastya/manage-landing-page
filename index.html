@@ -4,28 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
 
     <title>Manage landing page</title>
   </head>
   <body>
-    <!-- 
-  Pricing
-  Product
-  About Us
-  Careers
-  Community
+    <section class="main__desktop">
+      <div class="container">
+        <header class="header__desktop common-page-grid-desktop">
+          <div class="logo__desktop"></div>
 
-  Get Started
+          <nav>
+            <div class="header__links hide-for-mob">
+              <a href="#">Pricing</a>
+              <a href="#">Product</a>
+              <a href="#">About Us</a>
+              <a href="#">Careers</a>
+              <a href="#">Community</a>
+            </div>
 
-  Bring everyone together to build better products.
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desk">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
 
-  Manage makes it simple for software teams to plan day-to-day 
-  tasks while keeping the larger team goals in view.
+            <div class="overlay has-fade"></div>
 
-  Get Started
+            <div class="overlay__toggle-links has-fade">
+              <a href="#">Pricing</a>
+              <a href="#">Product</a>
+              <a href="#">About Us </a>
+              <a href="#">Careers</a>
+              <a href="#">Community</a>
+            </div>
+          </nav>
 
-  What’s different about Manage?
+          <button class="contact-button hide-for-mob" type="button">Get Started</button>
+        </header>
+
+        <div class="intro__desktop common-page-grid-desktop">
+          <div class="intro__desktop__picture"></div>
+          <div class="intro__desktop__text">
+            <h1 class="h1__desktop">Bring everyone together to build better products.</h1>
+            <p class="p__desktop">
+              Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
+            </p>
+            <button class="contact-button" type="button">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- What’s different about Manage?
 
   Manage provides all the functionality your team needs, without 
   the complexity. Our software is tailor-made for modern digital 
