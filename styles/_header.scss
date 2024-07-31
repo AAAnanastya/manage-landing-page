@@ -11,21 +11,21 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px 0 40px 0;
-  }
 
-  // Hamburger Open Styles
-  &.open {
-    .header__toggle {
-      > span:first-child {
-        transform: rotate(45deg);
-      }
+    // Hamburger Open Styles
+    &.open {
+      .header__toggle {
+        > span:first-child {
+          transform: rotate(45deg) translateY(10px);
+        }
 
-      > span:nth-child(2) {
-        opacity: 0;
-      }
+        > span:nth-child(2) {
+          opacity: 0;
+        }
 
-      > span:last-child {
-        transform: rotate(-45deg);
+        > span:last-child {
+          transform: rotate(-45deg) translateY(-10px);
+        }
       }
     }
   }
@@ -62,7 +62,7 @@
       height: 4px;
       background-color: $darkBlue;
       transition: all 300ms ease-in-out;
-      transform-origin: 3px 1px;
+      transform-origin: center;
 
       &:not(:last-child) {
         margin-bottom: 3px;
@@ -72,14 +72,31 @@
 }
 
 .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  opacity: 0;
+  pointer-events: none;
+
   &__toggle-links {
     position: absolute;
+    background-color: white;
+    width: 320px;
+    display: block;
+    transform: translate(-94%, 45px);
+    padding: 30px 0;
+    border-radius: 5px;
 
     a {
       display: block;
       margin: 0;
-      padding: 0.625rem;
-      color: black;
+      padding: 13.5px;
+      text-decoration: none;
+      color: $darkBlue;
+      font-size: 15px;
       text-align: center;
     }
   }

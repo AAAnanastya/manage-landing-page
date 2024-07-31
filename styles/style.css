@@ -48,6 +48,12 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 .h1__desktop {
   font-size: 50px;
   font-weight: 600;
@@ -122,6 +128,89 @@ body {
   box-shadow: 0 8px 20px -5px hsl(12, 88%, 59%);
 }
 
+.header__desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0 60px 0;
+}
+.header__mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 40px 0;
+}
+.header__mobile.open .header__toggle > span:first-child {
+  transform: rotate(45deg) translateY(10px);
+}
+.header__mobile.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+.header__mobile.open .header__toggle > span:last-child {
+  transform: rotate(-45deg) translateY(-10px);
+}
+.header nav {
+  position: relative;
+}
+.header__links {
+  font-size: 12px;
+}
+.header__links a {
+  color: hsl(228, 39%, 23%);
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+}
+.header__links a:not(:last-child) {
+  margin-right: 30px;
+}
+.header__links a:hover {
+  color: hsl(227, 12%, 61%);
+  cursor: pointer;
+}
+.header__toggle {
+  margin-left: auto;
+}
+.header__toggle span {
+  display: block;
+  width: 26px;
+  height: 4px;
+  background-color: hsl(228, 39%, 23%);
+  transition: all 300ms ease-in-out;
+  transform-origin: center;
+}
+.header__toggle span:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+.overlay__toggle-links {
+  position: absolute;
+  background-color: white;
+  width: 320px;
+  display: block;
+  transform: translate(-94%, 45px);
+  padding: 30px 0;
+  border-radius: 5px;
+}
+.overlay__toggle-links a {
+  display: block;
+  margin: 0;
+  padding: 13.5px;
+  text-decoration: none;
+  color: hsl(228, 39%, 23%);
+  font-size: 15px;
+  text-align: center;
+}
+
 .main__desktop {
   position: relative;
   overflow: hidden;
@@ -160,71 +249,6 @@ body {
   background-position: center;
   transform: translate(-50%, -50%) translate(90px, -260px);
   z-index: -1;
-}
-
-.header__desktop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 0 60px 0;
-}
-.header__mobile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 0 40px 0;
-}
-.header.open .header__toggle > span:first-child {
-  transform: rotate(45deg);
-}
-.header.open .header__toggle > span:nth-child(2) {
-  opacity: 0;
-}
-.header.open .header__toggle > span:last-child {
-  transform: rotate(-45deg);
-}
-.header nav {
-  position: relative;
-}
-.header__links {
-  font-size: 12px;
-}
-.header__links a {
-  color: hsl(228, 39%, 23%);
-  text-decoration: none;
-  transition: color 300ms ease-in-out;
-}
-.header__links a:not(:last-child) {
-  margin-right: 30px;
-}
-.header__links a:hover {
-  color: hsl(227, 12%, 61%);
-  cursor: pointer;
-}
-.header__toggle {
-  margin-left: auto;
-}
-.header__toggle span {
-  display: block;
-  width: 26px;
-  height: 4px;
-  background-color: hsl(228, 39%, 23%);
-  transition: all 300ms ease-in-out;
-  transform-origin: 3px 1px;
-}
-.header__toggle span:not(:last-child) {
-  margin-bottom: 3px;
-}
-
-.overlay__toggle-links {
-  position: absolute;
-}
-.overlay__toggle-links a {
-  display: block;
-  margin: 0;
-  padding: 0.625rem;
-  color: black;
-  text-align: center;
 }
 
 .intro__desktop {

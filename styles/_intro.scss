@@ -1,3 +1,46 @@
+.main {
+  &__desktop {
+    position: relative;
+    overflow: hidden;
+    min-height: 34rem;
+  }
+
+  &__mobile {
+    position: relative;
+    overflow: hidden;
+    min-height: 12rem;
+  }
+}
+
+.main__desktop::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('../assets/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(500px, -120px);
+  z-index: -1;
+}
+
+.main__mobile::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('../assets/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(90px, -260px);
+  z-index: -1;
+}
+
 .intro {
   &__desktop {
     display: flex;

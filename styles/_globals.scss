@@ -5,6 +5,13 @@ body {
   font-family: 'Be Vietnam Pro', sans-serif;
 }
 
+//Scroll restriction then Hamburger opened
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 .h1 {
   &__desktop {
     font-size: 50px;
@@ -86,47 +93,4 @@ body {
   width: 135px;
   height: 43px;
   box-shadow: 0 8px 20px -5px $brightRed;
-}
-
-.main {
-  &__desktop {
-    position: relative;
-    overflow: hidden;
-    min-height: 34rem;
-  }
-
-  &__mobile {
-    position: relative;
-    overflow: hidden;
-    min-height: 12rem;
-  }
-}
-
-.main__desktop::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background-image: url('../assets/bg-tablet-pattern.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translate(-50%, -50%) translate(500px, -120px);
-  z-index: -1;
-}
-
-.main__mobile::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background-image: url('../assets/bg-tablet-pattern.svg');
-  background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: center;
-  transform: translate(-50%, -50%) translate(90px, -260px);
-  z-index: -1;
 }

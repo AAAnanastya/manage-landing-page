@@ -16,3 +16,25 @@ function onSpecificSize() {
 window.addEventListener('resize', onSpecificSize);
 
 onSpecificSize();
+
+btnHamburger.addEventListener('click', function () {
+  let header = document.querySelector('.header__mobile');
+  let fadeEls = document.querySelectorAll('.has-fade');
+  let body = document.body;
+
+  if (header.classList.contains('open')) {
+    header.classList.remove('open');
+    fadeEls.forEach(function (element) {
+      element.classList.remove('fade-in');
+      element.classList.add('fade-out');
+      body.classList.remove('no-scroll');
+    });
+  } else {
+    header.classList.add('open');
+    fadeEls.forEach(function (element) {
+      element.classList.remove('fade-out');
+      element.classList.add('fade-in');
+      body.classList.add('no-scroll');
+    });
+  }
+});
