@@ -5,6 +5,7 @@ function onSpecificSize() {
   let changes = document.querySelectorAll('[class*="desktop"], [class*="mobile"]');
 
   changes.forEach((el) => {
+    console.log(window.innerWidth);
     if (width <= targetWidth) {
       el.className = el.className.replace(/desktop/g, 'mobile');
     } else if (width > targetWidth && el.className.includes('mobile')) {

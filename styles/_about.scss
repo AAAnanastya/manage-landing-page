@@ -1,0 +1,120 @@
+.about {
+  &__desktop-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  &__mobile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    &__desktop {
+      width: 525px;
+      height: 500px;
+
+      &__description {
+        max-width: 350px;
+      }
+    }
+
+    &__mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 320px;
+      height: 320px;
+
+      &__description {
+        max-width: 300px;
+      }
+    }
+  }
+
+  .opportunities {
+    &__desktop {
+      width: 525px;
+      min-height: 500px;
+    }
+
+    &__mobile {
+      width: 330px;
+      height: 320px;
+    }
+
+    &__title {
+      &__desktop-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+      }
+
+      &__mobile-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+      }
+
+      &__counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $brightRed;
+        height: 38px;
+        width: 65px;
+        border-radius: 20px;
+        font-size: 15px;
+        color: white;
+      }
+    }
+
+    &__text {
+      &__desktop {
+        margin-left: 95px;
+        margin-bottom: 35px;
+      }
+
+      &__mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.opportunities__title__mobile-container::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  background-color: $paleRed;
+  height: 38px;
+  width: -webkit-fill-available;
+  z-index: -1;
+}
+
+.about__mobile-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('../assets/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(200px, 342px);
+  z-index: -1;
+}

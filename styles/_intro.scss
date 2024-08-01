@@ -22,7 +22,7 @@
   background-image: url('../assets/bg-tablet-pattern.svg');
   background-repeat: no-repeat;
   background-position: center;
-  transform: translate(-50%, -50%) translate(500px, -120px);
+  transform: translate(-50%, -50%) translate(490px, -150px);
   z-index: -1;
 }
 
@@ -41,21 +41,37 @@
   z-index: -1;
 }
 
+.main__mobile::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('../assets/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(200px, 290px);
+  z-index: -1;
+}
+
 .intro {
   &__desktop {
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    gap: 50px;
     position: relative;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 
     &__picture {
       background-image: url(../assets/illustration-intro.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      width: 500px;
+      width: 525px;
       height: 500px;
       order: 2;
     }
@@ -65,7 +81,7 @@
       flex-direction: column;
       justify-content: center;
       order: 1;
-      width: 500px;
+      width: 525px;
       height: 500px;
     }
   }
@@ -90,7 +106,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding-bottom: 20px;
+      padding-bottom: 30px;
     }
   }
 }
