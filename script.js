@@ -5,7 +5,6 @@ function onSpecificSize() {
   let changes = document.querySelectorAll('[class*="desktop"], [class*="mobile"]');
 
   changes.forEach((el) => {
-    console.log(window.innerWidth);
     if (width <= targetWidth) {
       el.className = el.className.replace(/desktop/g, 'mobile');
     } else if (width > targetWidth && el.className.includes('mobile')) {
@@ -39,3 +38,19 @@ btnHamburger.addEventListener('click', function () {
     });
   }
 });
+
+const slider = new A11YSlider(document.querySelector('.slider'), {
+  slidesToShow: 1,
+  adaptiveHeight: false,
+  dots: true,
+  centerMode: true,
+  arrows: false,
+  responsive: {
+    800: {
+      dots: false,
+      slidesToShow: 2,
+    },
+  },
+});
+
+console.log(slider.slidesToShow);
