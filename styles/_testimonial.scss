@@ -18,7 +18,7 @@
     display: inherit;
     place-items: center;
     margin-top: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 
     &__carousel-container {
       display: flex;
@@ -74,14 +74,15 @@
 .a11y-slider-dots {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   padding: 0;
+  margin-bottom: 50px;
 }
 
 .a11y-slider-dots li {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   padding: 0;
 }
 

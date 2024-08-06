@@ -118,3 +118,17 @@
   transform: translate(-50%, -50%) translate(200px, 342px);
   z-index: -1;
 }
+
+.about__desktop-container:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('../assets/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(-800px, 400px);
+  z-index: -1;
+}

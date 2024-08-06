@@ -143,4 +143,57 @@ body {
   width: 135px;
   height: 43px;
   box-shadow: 0 8px 20px -5px $brightRed;
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb($paleRed, 0.2);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.contact-button-2 {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: $brightRed;
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  width: 135px;
+  height: 43px;
+  position: relative;
+  transition: color 300ms ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb($paleRed, 0.3);
+    opacity: 0;
+    border: none;
+    border-radius: 25px;
+    transition: opacity 300ms ease;
+    z-index: 9999;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    cursor: pointer;
+  }
 }

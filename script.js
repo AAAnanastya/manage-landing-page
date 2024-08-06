@@ -48,7 +48,7 @@ const slider = new A11YSlider(document.querySelector('.slider'), {
   responsive: {
     800: {
       dots: false,
-      slidesToShow: 2,
+      slidesToShow: 3,
     },
   },
 });

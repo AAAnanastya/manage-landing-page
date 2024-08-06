@@ -166,6 +166,55 @@ body {
   width: 135px;
   height: 43px;
   box-shadow: 0 8px 20px -5px hsl(12, 88%, 59%);
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+}
+.contact-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 239, 235, 0.2);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.contact-button:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.contact-button-2 {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(12, 88%, 59%);
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  width: 135px;
+  height: 43px;
+  position: relative;
+  transition: color 300ms ease-in-out;
+}
+.contact-button-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 239, 235, 0.3);
+  opacity: 0;
+  border: none;
+  border-radius: 25px;
+  transition: opacity 300ms ease;
+  z-index: 9999;
+}
+.contact-button-2:hover::after {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .header__desktop {
@@ -454,6 +503,20 @@ body {
   z-index: -1;
 }
 
+.about__desktop-container:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("../assets/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(-800px, 400px);
+  z-index: -1;
+}
+
 .testimonial__desktop {
   display: inherit;
   place-items: center;
@@ -471,7 +534,7 @@ body {
   display: inherit;
   place-items: center;
   margin-top: 20px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 .testimonial__mobile__carousel-container {
   display: flex;
@@ -520,14 +583,15 @@ body {
 .a11y-slider-dots {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   padding: 0;
+  margin-bottom: 50px;
 }
 
 .a11y-slider-dots li {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   padding: 0;
 }
 
@@ -545,4 +609,97 @@ body {
 
 .a11y-slider-dots li button.active {
   background: hsl(12, 88%, 59%);
+}
+
+.cta__desktop {
+  background-color: hsl(12, 88%, 59%);
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+}
+.cta__desktop__content {
+  display: flex;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+  align-items: center;
+  z-index: 2;
+}
+.cta__mobile {
+  background-color: hsl(12, 88%, 59%);
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+}
+.cta__mobile__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.cta__desktop__content::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url(../assets/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 550px;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(-230px, 100px);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.cta__desktop__content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 300%;
+  background-image: url(../assets/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 550px 550px;
+  background-position: center;
+  opacity: 0.1;
+  transform: translate(-50%, -50%) translate(785px, -240px);
+  z-index: 1;
+}
+
+.cta__desktop__content h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  max-width: 500px;
+}
+
+.cta__mobile__content h2 {
+  font-size: 37px;
+  font-weight: 600;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  max-width: 310px;
+}
+
+.cta__mobile__content::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-image: url(../assets/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position: center;
+  transform: translate(-50%, -50%) translate(-400px, 125px);
+  opacity: 0.1;
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */
