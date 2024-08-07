@@ -126,6 +126,8 @@ body {
 .container {
   display: grid;
   justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .common-page-grid-desktop {
