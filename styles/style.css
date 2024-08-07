@@ -702,4 +702,253 @@ body {
   transform: translate(-50%, -50%) translate(-400px, 125px);
   opacity: 0.1;
   z-index: 1;
+}
+
+.footer {
+  background-color: hsl(233, 12%, 13%);
+}
+.footer__desktop {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+}
+.footer__desktop__media {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__desktop__media__social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__desktop__navigation {
+  order: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 180px;
+}
+.footer__desktop__email {
+  order: 3;
+}
+.footer__desktop__copyright {
+  display: flex;
+  position: absolute;
+  transform: translate(380%, 250%);
+}
+.footer__mobile {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__mobile__email {
+  margin-bottom: 50px;
+}
+.footer__mobile__navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 80px;
+}
+.footer__mobile__media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 30px;
+  height: 100px;
+}
+.footer__mobile__media__social-links {
+  order: 1;
+  display: flex;
+  flex-direction: row;
+  transform: scale(1.5);
+  gap: 25px;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__mobile__media svg {
+  display: block;
+  order: 2;
+}
+
+.email {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.email__input__desktop {
+  height: 43px;
+  width: 200px;
+  border-radius: 25px;
+  border-style: none;
+  padding: 0;
+  font-family: "Be Vietnam Pro";
+  font-size: 13px;
+  text-indent: 20px;
+}
+.email__input__desktop::-moz-placeholder {
+  color: hsl(227, 12%, 61%);
+}
+.email__input__desktop::placeholder {
+  color: hsl(227, 12%, 61%);
+}
+.email__input__desktop:focus {
+  outline: none;
+}
+.email__input__mobile {
+  height: 43px;
+  width: 240px;
+  border-radius: 25px;
+  border-style: none;
+  padding: 0;
+  font-family: "Be Vietnam Pro";
+  font-size: 13px;
+  text-indent: 20px;
+}
+.email__input__mobile::-moz-placeholder {
+  color: hsl(227, 12%, 61%);
+}
+.email__input__mobile::placeholder {
+  color: hsl(227, 12%, 61%);
+}
+.email__input__mobile:focus {
+  outline: none;
+}
+.email__error-notification {
+  font-family: "Be Vietnam Pro";
+  font-size: 10px;
+  font-style: italic;
+  color: hsl(12, 88%, 59%);
+  margin: 5px 21px;
+}
+
+.logo-white-text {
+  fill: white;
+}
+
+.social-media-logo {
+  transition: fill 100ms ease-in-out;
+}
+.social-media-logo:hover {
+  fill: hsl(12, 88%, 59%);
+  cursor: pointer;
+}
+
+.email-submit-button-desktop {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  background-color: hsl(12, 88%, 59%);
+  border: none;
+  border-radius: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 43px;
+  width: 65px;
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+}
+.email-submit-button-desktop::before {
+  content: "Go";
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.email-submit-button-desktop::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(255, 239, 235, 0.2);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.email-submit-button-desktop:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.email-submit-button-mobile {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  background-color: hsl(12, 88%, 59%);
+  border: none;
+  border-radius: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 43px;
+  width: 80px;
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+}
+.email-submit-button-mobile::before {
+  content: "GO";
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.email-submit-button-mobile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(255, 239, 235, 0.2);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.email-submit-button-mobile:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.notification__hidden {
+  display: none;
+}
+.notification__shown {
+  display: block;
+}
+
+.error {
+  outline: 1px solid hsl(12, 88%, 59%);
+  color: hsl(12, 88%, 59%);
+}
+
+.footer a {
+  color: hsl(0, 0%, 98%);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+}
+.footer a:hover {
+  color: hsl(12, 88%, 59%);
+  cursor: pointer;
+}
+
+.footer p {
+  font-family: "Be Vietnam Pro";
+  font-size: 13px;
+  color: hsl(227, 12%, 61%);
 }/*# sourceMappingURL=style.css.map */

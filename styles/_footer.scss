@@ -1,0 +1,272 @@
+.footer {
+  background-color: $veryDarkBlue;
+
+  &__desktop {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+
+    &__media {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: -webkit-fill-available;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &__navigation {
+      order: 2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 180px;
+    }
+
+    &__email {
+      order: 3;
+    }
+    &__copyright {
+      display: flex;
+      position: absolute;
+      transform: translate(380%, 250%);
+    }
+  }
+
+  &__mobile {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__email {
+      margin-bottom: 50px;
+    }
+
+    &__navigation {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 80px;
+    }
+
+    &__media {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 50px 0 30px;
+      height: 100px;
+
+      &__social-links {
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        transform: scale(1.5);
+        gap: 25px;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      svg {
+        display: block;
+        order: 2;
+      }
+    }
+  }
+}
+
+.email {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+  &__input {
+    &__desktop {
+      height: 43px;
+      width: 200px;
+      border-radius: 25px;
+      border-style: none;
+      padding: 0;
+      font-family: 'Be Vietnam Pro';
+      font-size: 13px;
+      text-indent: 20px;
+
+      &::placeholder {
+        color: $grayishBlue;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__mobile {
+      height: 43px;
+      width: 240px;
+      border-radius: 25px;
+      border-style: none;
+      padding: 0;
+      font-family: 'Be Vietnam Pro';
+      font-size: 13px;
+      text-indent: 20px;
+
+      &::placeholder {
+        color: $grayishBlue;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__error-notification {
+    font-family: 'Be Vietnam Pro';
+    font-size: 10px;
+    font-style: italic;
+    color: $brightRed;
+    margin: 5px 21px;
+  }
+}
+
+.logo-white-text {
+  fill: white;
+}
+
+.social-media-logo {
+  transition: fill 100ms ease-in-out;
+
+  &:hover {
+    fill: $brightRed;
+    cursor: pointer;
+  }
+}
+
+.email-submit-button-desktop {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  background-color: $brightRed;
+  border: none;
+  border-radius: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 43px;
+  width: 65px;
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+
+  &::before {
+    content: 'Go';
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb($paleRed, 0.2);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.email-submit-button-mobile {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  background-color: $brightRed;
+  border: none;
+  border-radius: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 43px;
+  width: 80px;
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+
+  &::before {
+    content: 'GO';
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb($paleRed, 0.2);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.notification {
+  &__hidden {
+    display: none;
+  }
+
+  &__shown {
+    display: block;
+  }
+}
+
+.error {
+  outline: 1px solid $brightRed;
+  color: $brightRed;
+}
+
+.footer a {
+  color: $lightGray;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+
+  &:hover {
+    color: $brightRed;
+    cursor: pointer;
+  }
+}
+
+.footer p {
+  font-family: 'Be Vietnam Pro';
+  font-size: 13px;
+  color: $grayishBlue;
+}

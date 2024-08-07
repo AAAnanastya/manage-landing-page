@@ -53,4 +53,19 @@ const slider = new A11YSlider(document.querySelector('.slider'), {
   },
 });
 
-console.log(slider.slidesToShow);
+function emailIsValid() {
+  let input = document.querySelector('input[type="email"]');
+  let email = input.value.trim();
+  let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  let notification = document.getElementById('error-message');
+
+  if (regex.test(email) == false) {
+    input.classList.add('error');
+    notification.classList.remove('notification__hidden');
+    notification.classList.add('notification__shown');
+  } else if (regex.test(email) == true && input.className.includes('error')) {
+    input.classList.remove('error');
+    notification.classList.remove('notification__shown');
+    notification.classList.add('notification__hidden');
+  }
+}
