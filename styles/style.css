@@ -406,6 +406,10 @@ body {
   padding-bottom: 30px;
 }
 
+.about {
+  position: relative;
+  overflow: hidden;
+}
 .about__desktop-container {
   display: flex;
   flex-direction: row;
@@ -501,7 +505,7 @@ body {
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: center;
-  transform: translate(-50%, -50%) translate(200px, 342px);
+  transform: translate(-50%, -50%) translate(200px, -522px);
   z-index: -1;
 }
 
